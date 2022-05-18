@@ -34,4 +34,12 @@ public class ParkingLot {
 
         return this.parkedCars.remove(ticket);
     }
+
+    public boolean isAvailable() {
+        return this.parkedCars.size() < this.carportCount;
+    }
+
+    public boolean hasCar(Ticket ticket) {
+        return this.parkedCars.containsKey(ticket);
+    }
 }
